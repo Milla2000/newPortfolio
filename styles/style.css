@@ -26,6 +26,7 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+  
 }
 .header {
   position: fixed;
@@ -93,6 +94,7 @@ section {
 
 .home {
   display: flex;
+  /* flex-wrap: wrap; */
   align-items: center;
   padding-top: 118px;
   background: url("/images/f1-removebg-preview.png") no-repeat;
@@ -105,6 +107,7 @@ section {
   max-width: 33rem;
   z-index: 1;
   /* height: auto; */
+  box-sizing: border-box;
 }
 
 .home-content h1 {
@@ -130,7 +133,9 @@ section {
 
 .home-content p {
   font-size: 1.1rem;
-  margin: 2rem 0 2rem;
+  padding: 2rem 0 2rem;
+ display: flex;
+ flex-wrap: wrap;
 }
 
 .btn-box {
@@ -687,7 +692,7 @@ span {
     box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
     display: block;
     transition: 0.25s ease;
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
     z-index: 1;
   }
   .navbar.active {
@@ -710,7 +715,7 @@ span {
 
   .navbar.active .active-nav {
     right: 0;
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
   }
 
   .navbar a {
@@ -723,6 +728,15 @@ span {
   }
   .navbar.active {
     transform: translate(0);
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
+  }
+
+  .home-imgHover{
+    pointer-events: none;
+    background: var(--bg-color);
+    opacity: .6;
+  }
+  .home-content{
+    width: auto;
   }
 }
