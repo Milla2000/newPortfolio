@@ -28,7 +28,14 @@ window.onscroll = () => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             });
+            // active section for animation onscroll
+             sec.classList.add('show-animate');
         }
+        // animation that repeat onscroll
+        else {
+            sec.classList.remove('show-animate');
+        }
+
     });
     //sticky header
     let header = document.querySelector('header')
